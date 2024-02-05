@@ -1,0 +1,189 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  padding: 0; /* Reset padding */
+  margin: 0; /* Reset margin */
+}
+
+.general-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "main content";
+}
+/* Main section styles */
+main {
+  grid-area: main;
+  display: flex;
+  height: auto;
+  background-color: rgb(193, 86, 48);
+}
+
+/* Navigation area styles */
+.nav-area {
+  top: 50px;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* Burger dash styles */
+.burger-dash {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  left: 0px; /* TODO: Check and update left value */
+  margin: 3px 0;
+}
+
+/* Burger styles */
+.burger {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background-color: black;
+  color: white;
+  padding: 50px; /* TODO: Check and update padding */
+  border: 3px solid orangered;
+  border-radius: 100%;
+}
+
+/* Hidden navigation styles */
+.hide-nav {
+  /* display: none !important; */ /* TODO: Investigate and update styles */
+  background-color: transparent !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Circular navigation styles */
+.circle-nav {
+  background-color: rgba(0, 0, 0, 0.805);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -100px; /* TODO: Check and update left value */
+  transition: all 0.25s ease-in;
+}
+
+/* Circular navigation item styles */
+.circle-nav_item {
+  width: 50px;
+  height: 50px;
+  background-color: orangered;
+  position: absolute;
+  border-radius: 100%;
+}
+
+/* Individual circular navigation item styles */
+.item_one {
+  top: 10px;
+}
+
+.item_two {
+  top: 30px;
+  right: 55px;
+}
+
+.item_three {
+  top: 90px;
+  right: 15px;
+}
+
+.item_four {
+  top: 155px;
+  right: 20px;
+}
+
+.item_four {
+  top: 160px; /* TODO: Check and update top value */
+  right: 15px; /* TODO: Check and update right value */
+}
+
+.item_five {
+  top: 215px;
+  right: 58px;
+}
+
+.item_six {
+  bottom: 10px;
+  right: 120px;
+}
+
+/* Icon styles */
+.icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Icon text styles */
+.icon i {
+  font-size: 25px;
+  color: white;
+}
+
+/* Icon link styles */
+.icon a {
+  text-decoration: none;
+}
+
+/* content container */
+#content {
+  grid-area: content;
+  background-color: black;
+  color: black;
+  padding: 20px 20px 20px 0;
+  background-color: rgb(193, 86, 48);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid black;
+  width: 100%;
+}
+
+/* paragraphs */
+p {
+  margin-bottom: 10px;
+}
+
+/* media query */
+@media only screen and (max-width: 650px) {
+  .general-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1% 1fr;
+    grid-template-areas:
+      "main"
+      "content";
+  }
+
+  /* Burger styles */
+  .burger {
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    color: white;
+  }
+
+  .burger-dash {
+    left: 10px; /* TODO: Check and update left value */
+  }
+
+  #content {
+    padding: 20px;
+    border: 3px solid black;
+  }
+}
