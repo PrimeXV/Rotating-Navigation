@@ -134,6 +134,11 @@ main {
   color: white;
 }
 
+/* icon hover */
+.icon i:hover {
+color: black;
+}
+
 /* Icon link styles */
 .icon a {
   text-decoration: none;
